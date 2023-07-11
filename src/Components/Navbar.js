@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
-import { Nav } from 'react-bootstrap';
+// import { Nav } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
@@ -28,7 +28,7 @@ const NavBar = () => {
             <Link to="/about-us">About Us</Link>
           </Menu.Item>
         </Menu>
-        <div>
+        {/* <div>
           {console.log(Auth.loggedIn())};
           {Auth.loggedIn() ? (
             <>
@@ -39,7 +39,7 @@ const NavBar = () => {
               Login
             </Nav.Link>
           )}
-        </div>
+        </div> */}
       </Header>
     </Layout>
   );
