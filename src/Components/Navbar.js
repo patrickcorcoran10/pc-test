@@ -1,47 +1,46 @@
 import React from 'react';
 // import { Layout, Menu } from 'antd';
-import { Nav } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 // const { Header } = Layout;
 
 const NavBar = () => {
-  const handleLogoutClick = () => {
-    Auth.logout();
-  };
+//   const handleLogoutClick = () => {
+//     Auth.logout();
+//   };
 
   return (
-    // <Layout className="layout">
-    //   <Header style={{ display: 'flex', justifyContent: 'center' }}>
-    //     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-    //       <Menu.Item key="1">
-    //         <Link to="/">Home</Link>
-    //       </Menu.Item>
-    //       <Menu.Item key="2">
-    //         <Link to="/dashboard">Dashboard</Link>
-    //       </Menu.Item>
-    //       <Menu.Item key="3">
-    //         <Link to="/calories">Count my Calories</Link>
-    //       </Menu.Item>
-    //       <Menu.Item key="4">
-    //         <Link to="/about-us">About Us</Link>
-    //       </Menu.Item>
-    //     </Menu>
-    //     <div>
-    //       {Auth.loggedIn() ? (
-            <>
-              <Link onClick={handleLogoutClick}>Logout</Link>
-            </>
-    //       ) : (
-    //         <Link onClick={() => (window.location.pathname = '/login')}>
-    //           Login
-    //         </Link>
-    //       )}
-    //     </div>
-    //   </Header>
-    // </Layout>
-    
+   
+    <>
+         <Navbar bg='dark' variant='dark' expand='lg'>
+        <Container fluid>
+          <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
+            <Nav className='ml-auto d-flex'>
+              <Nav.Link as={Link} to='/'>
+                Home
+              </Nav.Link>
+              {Auth.loggedIn() ? (
+                <>
+                  <Nav.Link as={Link} to='/dashboard'>
+                    Dashboard
+                  </Nav.Link>
+                </>
+              ): (
+                <></>
+              )}
+              <Nav.Link as={Link} to='/calories'>
+                Count Calories
+              </Nav.Link>
+              <Nav.Link as={Link} to='/about-us'>
+                About Us
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
   );
 };
 
