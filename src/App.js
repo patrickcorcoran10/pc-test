@@ -3,12 +3,12 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@ap
 import { setContext } from '@apollo/client/link/context';
 import './App.css';
 // import Login from './Components/Login';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 // import Dashboard from "./pages/Dashboard";
 // import Calories from "./pages/Calories";
 // import { Register } from "./Components/Signup";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Homepage from "./pages/Homepage";
+import Homepage from "./pages/Homepage";
 // import AboutUs from "./pages/AboutUs";
 
 const httpLink = createHttpLink({
@@ -44,12 +44,12 @@ function App() {
       <BrowserRouter>
         <div>
           <nav>
-            <Navbar />
+            {/* <Navbar /> */}
           </nav>
           <Routes>
             {/* <Route path='calories' element={<Calories />} /> */}
             {/* <Route path='login' element={<Login onFormSwitch={toggleForm} />} /> */}
-            {/* <Route path='/' element={<Homepage />} /> */}
+            <Route path='/' element={<Homepage />} />
             {/* <Route path='/dashboard' element={<Dashboard />} />
             <Route path='register' element={<Register onFormSwitch={toggleForm} />} />
             <Route path='/about-us' element={<AboutUs />} /> */}
