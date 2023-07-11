@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
-import { Nav } from 'react-bootstrap';
+// import { Nav } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
@@ -31,12 +31,12 @@ const NavBar = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Nav.Link onClick={handleLogoutClick}>Logout</Nav.Link>
+              <Link onClick={handleLogoutClick}>Logout</Link>
             </>
           ) : (
-            <Nav.Link onClick={() => (window.location.pathname = '/login')}>
+            <Link onClick={() => (window.location.pathname = '/login')}>
               Login
-            </Nav.Link>
+            </Link>
           )}
         </div>
       </Header>
