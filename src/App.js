@@ -47,11 +47,11 @@ function App() {
             <Navbar />
           </nav>
           <Routes>
-            <Route path='calories' element={<Calories />} />
-            <Route path='login' element={<Login onFormSwitch={toggleForm} />} />
+            <Route path='/calories' element={<Calories />} />
+            <Route path='/login' element={<Login onFormSwitch={toggleForm} />} />
             <Route path='/' element={<Homepage />} />
             {/* <Route path='/dashboard' element={<Dashboard />} /> */}
-            <Route path='register' element={<Register onFormSwitch={toggleForm} />} />
+            <Route path='/register' element={<Register onFormSwitch={toggleForm} />} />
             <Route path='/about-us' element={<AboutUs />} />
           </Routes>
         </div>
