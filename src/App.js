@@ -4,7 +4,7 @@ import { setContext } from '@apollo/client/link/context';
 import './App.css';
 import Login from './Components/Login';
 // import Navbar from './Components/Navbar';
-import Dashboard from "./pages/Dashboard";
+// import Dashboard from "./pages/Dashboard";
 import Calories from "./pages/Calories";
 import { Register } from "./Components/Signup";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -50,7 +50,7 @@ function App() {
             <Route path='calories' element={<Calories />} />
             <Route path='login' element={<Login onFormSwitch={toggleForm} />} />
             <Route path='/' element={<Homepage />} />
-            <Route path='/dashboard' element={<Dashboard />} />
+            {/* <Route path='/dashboard' element={<Dashboard />} /> */}
             <Route path='register' element={<Register onFormSwitch={toggleForm} />} />
             <Route path='/about-us' element={<AboutUs />} />
           </Routes>
