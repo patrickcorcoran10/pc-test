@@ -1,15 +1,13 @@
 import React from 'react';
-// import { Layout, Menu } from 'antd';
+
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
-// const { Header } = Layout;
+
 
 const NavBar = () => {
-//   const handleLogoutClick = () => {
-//     Auth.logout();
-//   };
+
 
   return (
    
