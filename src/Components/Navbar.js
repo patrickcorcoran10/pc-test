@@ -14,7 +14,7 @@ const NavBar = () => {
     <>
          <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
-          <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
+          {/* <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'> */}
             <Nav className='ml-auto d-flex'>
               <Nav.Link as={Link} to='/'>
                 Home
@@ -35,7 +35,7 @@ const NavBar = () => {
                 About Us
               </Nav.Link>
             </Nav>
-          </Navbar.Collapse>
+          {/* </Navbar.Collapse> */}
         </Container>
       </Navbar>
     </>
