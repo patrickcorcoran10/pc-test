@@ -12,9 +12,9 @@ const NavBar = () => {
   };
 
   return (
-    // <Layout className="layout">
-    //   <Header style={{ display: 'flex', justifyContent: 'center' }}>
-        {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+    <Layout className="layout">
+      <Header style={{ display: 'flex', justifyContent: 'center' }}>
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
           <Menu.Item key="1">
             <Link to="/">Home</Link>
           </Menu.Item>
@@ -27,9 +27,8 @@ const NavBar = () => {
           <Menu.Item key="4">
             <Link to="/about-us">About Us</Link>
           </Menu.Item>
-        </Menu> */}
+        </Menu>
         <div>
-          {console.log(Auth.loggedIn())};
           {Auth.loggedIn() ? (
             <>
               <Nav.Link onClick={handleLogoutClick}>Logout</Nav.Link>
@@ -40,8 +39,9 @@ const NavBar = () => {
             </Nav.Link>
           )}
         </div>
-      {/* </Header>
-    </Layout> */}
+      </Header>
+    </Layout>
+    
   );
 };
 
